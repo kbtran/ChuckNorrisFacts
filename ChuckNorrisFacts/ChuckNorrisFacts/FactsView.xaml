@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChuckNorrisFacts.FactsView">
+  <ContentView.Content>
+      <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Picker x:Name="CategoryPicker"></Picker>
+                <Button x:Name="GetFactButton" Clicked="GetFactClicked" Text="Get fact"></Button>
+                <Button x:Name="GetFavoriteButton" Clicked="GetFavoriteClicked"
+                          Text="Get random favorite" IsEnabled="False"></Button>
+                <Button x:Name="AddFavoriteButton" Clicked="AddFavoriteClicked"
+                          Text="Add to favorites" IsEnabled="False"></Button>
+            </StackLayout>
+            <Label x:Name="FactLabel"/>
+       </StackLayout>
+  </ContentView.Content>
+</ContentView>
