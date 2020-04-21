@@ -8,8 +8,9 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <local:FactsView></local:FactsView>
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <local:FactsView x:Name="FactsView"></local:FactsView>
+        <local:LoginView x:Name="LoginView" LoginChanged="HandleLoginChanged"></local:LoginView>
+        <Label Text="Welcome to Chuck Norris Facts!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
     </StackLayout>

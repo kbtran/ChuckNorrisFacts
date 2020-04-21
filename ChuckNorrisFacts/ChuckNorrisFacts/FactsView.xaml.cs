@@ -30,6 +30,16 @@ namespace ChuckNorrisFacts
             _userFavorites = new Dictionary<string, List<string>>();
         }
 
+        public void HandleLoginChanged(string userName)
+        {
+            FactLabel.Text = "";
+            bool isLoggedIn = userName != null;
+            AddFavoriteButton.IsEnabled = GetFavoriteButton.IsEnabled = isLoggedIn;
+            _userName = isLoggedIn ? userName : null;
+            if (userName != null && !_userFavorites.ContainsKey(userName))
+                _userFavorites.Add(userName, new List<string>());
+        }
+
         private void GetFavoriteClicked(object sender, EventArgs e)
         {
             FactLabel.Text = Favorites.Count == 0
